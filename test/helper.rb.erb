@@ -1,9 +1,12 @@
 <%- if bundler? -%>
-## Uncomment if you want to run a test manually with ruby -I test test/test_...rb (another solution is to use 'rake test TEST=test/test_...rb'
+## Uncomment if you want to run a test directly without running
+## `bundle exec ruby -I test test/test_...rb`
+## (another solution if 'bundler/setup' is called on the Rakefile is to use
+## `rake test TEST=test/test_...rb`)
 # begin
 #   require 'bundler/setup'
 # rescue LoadError => error
-#   abort error.message
+#   warn "Could not setup bundler: #{error.message}"
 # end
 
 <%- end -%>
